@@ -18,6 +18,7 @@ class WordNet(WordDictionary):
         try:
             import nltk
             from nltk.corpus import wordnet
+            wordnet.ensure_loaded()
         except ModuleNotFoundError:
             raise ModuleNotFoundError('Missed nltk library. Install nltk by `pip install nltk`')
 
